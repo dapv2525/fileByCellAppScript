@@ -1,0 +1,7 @@
+function renameFile(e) {
+  const sh = e.range.getSheet();
+  var newName = sh.getRange(e.range.rowStart,1).getValue();
+  var idDeBox = sh.getRange(e.range.rowStart,2).getValue();
+  var file = SpreadsheetApp.openById(idDeBox);
+  file.rename(newName);
+}
